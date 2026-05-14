@@ -178,6 +178,11 @@ function AdvancedPredict() {
       background: rgba(255, 107, 107, 0.2);
       animation: float 8s ease-in-out infinite;
     }
+
+    select option {
+      background-color: #1a0000;
+      color: white;
+    }
   `;
 
     return (
@@ -227,7 +232,7 @@ function AdvancedPredict() {
                                 name="predictionType"
                                 value={form.predictionType}
                                 onChange={handleChange}
-                                style={{ width: '100%', padding: '12px', borderRadius: '8px', backgroundColor: 'rgba(255, 107, 107, 0.1)', border: '2px solid rgba(255, 107, 107, 0.3)', color: 'white', fontSize: '1rem', cursor: 'pointer' }}
+                                style={{ width: '100%', padding: '12px', borderRadius: '8px', backgroundColor: '#2a0000', border: '2px solid rgba(255, 107, 107, 0.3)', color: 'white', fontSize: '1rem', cursor: 'pointer' }}
                             >
                                 <option value="Rainfall">🌊 Heavy Rainfall</option>
                                 <option value="Heatwave">🔥 Heatwave</option>
@@ -242,7 +247,7 @@ function AdvancedPredict() {
                                 name="city"
                                 value={form.city}
                                 onChange={handleChange}
-                                style={{ width: '100%', padding: '12px', borderRadius: '8px', backgroundColor: 'rgba(255, 107, 107, 0.1)', border: '2px solid rgba(255, 107, 107, 0.3)', color: 'white', fontSize: '1rem', cursor: 'pointer' }}
+                                style={{ width: '100%', padding: '12px', borderRadius: '8px', backgroundColor: '#2a0000', border: '2px solid rgba(255, 107, 107, 0.3)', color: 'white', fontSize: '1rem', cursor: 'pointer' }}
                             >
                                 {cities.map(city => (
                                     <option key={city} value={city}>{city}</option>

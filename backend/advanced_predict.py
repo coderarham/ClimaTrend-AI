@@ -202,14 +202,15 @@ def predict_extreme_weather(city, date):
                 "success": False
             }
         
-        # Get city coordinates
-        if city not in CITY_COORDS:
+        # Get city coordinates (case-insensitive match)
+        city_key = next((k for k in CITY_COORDS if k.lower() == city.lower()), None)
+        if city_key is None:
             return {
                 "error": f"City '{city}' not found in supported cities",
                 "success": False
             }
-        
-        lat, lon, elev = CITY_COORDS[city]
+        city = city_key  # normalize to correct casing
+        lat, lon, elev = CITY_COORDS[city_key]
         
         # Fetch forecast data
         forecast_list = fetch_forecast_data(city)

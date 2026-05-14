@@ -229,7 +229,7 @@ CITY_SNOW_OFFSETS = {
 # ================================
 # GET AVAILABLE CITIES BY COUNTRY
 # ================================
-def get_cities(country):
+def get_cities(country, prediction_type=None):
     """Returns sorted list of available cities for a country"""
     country = country.lower()
     india_cities = ['Ahmedabad', 'Bangalore', 'Chandigarh', 'Chennai', 'Delhi', 'Goa', 'Hyderabad', 'Indore', 'Jaipur', 'Kochi', 'Kolkata', 'Lucknow', 'Mumbai', 'Nagpur', 'Patna', 'Pune', 'Shimla', 'Surat', 'Thiruvananthapuram', 'Varanasi']
